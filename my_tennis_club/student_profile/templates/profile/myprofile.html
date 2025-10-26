@@ -1,0 +1,94 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <header id="nav">
+        <div id="logo">LOGO</div>
+        <nav>
+            <ul id="link">
+                <li><a href="">link1</a></li>
+                <li><a href="">link2</a></li>
+                <li><a href="">link3</a></li>
+            </ul>
+
+        </nav>
+        <div id="user">
+            <a href="#"><i class="fas fa-user"></i></a>
+        </div>
+    </header>
+    <section id="sec1">
+        <aside id="card1">
+            <div id="prof-pic">
+            </div>
+            <div id="person-info">
+                <div>
+                    <h2>Harry Amante</h2>
+                    <hr>
+                    <p>Full Name</p>
+                </div>
+                <div>
+                    <h2>21</h2>
+                    <hr>
+                    <p>Age</p>
+                </div>
+                <div>
+                    <h2>Male</h2>
+                    <hr>
+                    <p>Gender</p>
+                </div>
+                <div>
+                    <h2>Brgy, Cotta, Lucena City</h2>
+                    <hr>
+                    <p>Address</p>
+                </div>
+                <div>
+                    <h2>0931****217</h2>
+                    <hr>
+                    <p>Contact</p>
+                </div>
+            </div>
+        </aside>
+        <main id="card2">
+            <div class="card-info">
+                <div class="card-header">
+                    <h2>EDUCATION BACKGROUND</h2>
+                </div>
+
+                <div class="data-card">
+                    <label>Education Level</label>
+                    <p class="field-box">G12</p>
+
+                    <label>School Name</label>
+                    <p class="field-box">MBVNHS</p>
+
+                    <label>School Address</label>
+                    <p class="field-box">San Francisco Quezon</p>
+
+                    <label>Course</label>
+                    <p class="field-box">ICT</p>
+
+                    <label>Year Graduated</label>
+                    <p class="field-box">2019-2020</p>
+                </div>
+            </div>
+
+            <div class="card-info">
+                <h2 class="hed">education background</h2>
+            </div>
+            <div class="card-info">
+                <h2 class="hed">Course</h2>
+            </div>
+            <div class="card-info">
+                <h2 class="hed">Tuition</h2>
+            </div>
+        </main>
+    </section>
+</body>
+</html>
