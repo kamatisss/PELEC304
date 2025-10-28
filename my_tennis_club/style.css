@@ -1,0 +1,181 @@
+* {
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    padding: 20px;
+    width: 100%;
+    gap: 10px;
+    top: 0;
+    position: fixed;
+    align-items: center;
+    background-color: rgb(194, 24, 24);
+    flex-direction: row;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    background-color: blue;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+#layout {
+    display: flex;
+    margin-top: 100px;
+    gap: 15px;
+    background-color: #c68a12;
+}
+
+#card1 {
+    position: sticky;
+    top: 100px; /* equal to navbar height */
+    width: 500px;
+    height: 700px;
+    margin: 20px 0 0 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(to bottom, #D6CBBE, #FAF9F7);
+}
+
+#card2 {
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.info-card1,
+.info-card2,
+.info-card3,
+.info-card4,
+.info-card5,
+.info-card6 {
+    background-color: black;
+    width: 550px;
+    height: 500px;
+    border-radius: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* body, html {
+    height: 100%;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    padding: 20px;
+    width: 100%;
+    gap: 10px;
+    top: 0;
+    position: fixed;
+    align-items: center;
+    background-color: rgb(194, 24, 24);
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+nav{
+    display: flex;
+    background-color: blue
+}
+
+ul{
+    flex-direction: row
+}
+
+#layout {
+    display: flex;
+    margin-top: 100px;
+    gap: 15px;
+    border: 1px solid black;
+    background-color: #c68a12;
+}
+
+#card1 {
+    position: sticky;
+    left: 0;
+    top: 150px;
+    border: 1px solid black;
+    width: 500px;
+    height: 700px;
+    margin: 20px 0 0 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom,#D6CBBE,#FAF9F7);
+}
+
+#card2 {  
+    width: fit-content;
+    padding: 20px;
+    height: fit-content;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.info-card1,
+.info-card2,
+.info-card3,
+.info-card4,
+.info-card5,
+.info-card6{
+    background-color: black;
+    width: 550px;
+    height: 500px;
+    border-radius: 15px;
+    overflow: hidden;
+} */
