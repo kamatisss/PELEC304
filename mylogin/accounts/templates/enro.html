@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card {
+            display: flex;
+            flex-direction: column;            
+        }
+        .formss {
+            flex-direction: row;
+        }
+        .form-control {
+            border-radius: 20px;
+            border: 1px solid skyblue;
+        }
+        .form-control:focus {
+            box-shadow: 0px 0px 10px 0px skyblue;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div>
+            {% if messages %}
+                {% for message in messages %}
+                    {{message}}
+                {% endfor %}
+            {% endif %}
+        </div>
+        
+        <div class="formss">
+            <form method="POST">
+                {% csrf_token %}
+                {% for fom in form %}
+                    <label >{{fom.label}}</label>
+                    {{fom}}
+                {% endfor %}
+                <button type="submit">Enroll</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

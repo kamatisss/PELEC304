@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Student Enrollment Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  </head>
+  <body class="bg-light">
+    <div class="container mt-5">
+      <div class="text-center mb-4">
+        <h2 class="fw-bold text-primary">🎓 Student Enrollment Form</h2>
+        <p class="text-muted">Please fill out the form carefully and accurately.</p>
+      </div>
+
+      {% if messages %}
+        <div class="mb-3">
+          {% for message in messages %}
+            <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+              {{ message }}
+              <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            </div>
+          {% endfor %}
+        </div>
+      {% endif %}
+
+      <div class="card shadow-sm p-4">
+        <form method="POST" novalidate>
+          {% csrf_token %}
+
+          {% for field in form %}
+            <div class="mb-3">
+              <label class="form-label fw-semibold">{{ field.label }}</label>
+              {{ field }}
+              {% if field.errors %}
+                <div class="text-danger small">{{ field.errors|striptags }}</div>
+              {% endif %}
+            </div>
+          {% endfor %}
+
+          <div class="d-flex justify-content-between mt-4">
+            <button type="submit" class="btn btn-primary px-4">Enroll Now</button>
+            <a href="{% url 'enroll_success' %}" class="btn btn-outline-secondary">View Success Page</a>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
